@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 
 const Banner = () => {
   const bannerRef = useRef(null);
+  const textRef = useRef(null);
   let animationFrame;
   let shiftSpeed = 0.1;
   const bannerHeight = "15vh";
@@ -11,11 +12,12 @@ const Banner = () => {
   useEffect(() => {
     let hue = -50;
     const bannerStyle = bannerRef.current.style;
+    const textStyle = textRef.current.style;
     const colorShift = () => {
       hue = (hue + shiftSpeed) % 360;
-      console.log("hue" + hue);
-      bannerStyle.backgroundColor = "hsla(" + hue + ", 100%, 70%, 1.00)";
-      console.log(bannerStyle.backgroundColor);
+      const color = "hsla(" + hue + ", 100%, 70%, 1.00)";
+      bannerStyle.borderColor = color;
+      textStyle.color = color;
       animationFrame = requestAnimationFrame(colorShift);
     };
     animationFrame = requestAnimationFrame(colorShift);
@@ -26,21 +28,22 @@ const Banner = () => {
   return (
     <>
       <motion.div
-        initial={{ height: "0vh" }}
-        animate={{ height: bannerHeight }}
+        initial={{ height: "0vh", opacity: 0 }}
+        animate={{ height: bannerHeight, opacity: 1 }}
         layout={false}
         transition={{
           type: "spring",
-          delay: 1,
+          delay: 1.5,
           duration: 2,
           stiffness: 100,
           damping: 10,
         }}
         ref={bannerRef}
-        style={{}}
         className="banner-container"
       >
-        <div className="banner-text">Michael Burton</div>
+        <div ref={textRef} className="banner-text">
+          Michael Burton
+        </div>
       </motion.div>
     </>
   );

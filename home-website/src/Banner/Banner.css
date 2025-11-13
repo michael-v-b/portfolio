@@ -4,12 +4,11 @@
     align-items:center;
     width:100vw;
     height:20vh;
-    background-color:red;
     border-radius:0px 0px 5vh 5vh;
+    border-style:solid;
     z-index:10;
 }
 .banner-text{
     color:#111;
-    font-weight:400;
     font-size:8vh;
 }
