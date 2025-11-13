@@ -22,12 +22,17 @@ const Background = () => {
       <div className="background-container">
         <div className="background-animation">
           {starPositions.map((value, key) => {
-            console.log("value:");
-            console.dir(value);
+            const hue = Math.random() * 360;
+            const color = "hsla(" + hue + ",100%,90%,100%)";
             return (
               <Star
                 key={key}
-                style={{ position: "absolute", top: value[1], left: value[0] }}
+                style={{
+                  backgroundColor: color,
+                  position: "absolute",
+                  top: value[1],
+                  left: value[0],
+                }}
               />
             );
           })}
