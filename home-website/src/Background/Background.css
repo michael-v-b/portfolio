@@ -1,4 +1,5 @@
 .background-container{
+    left:0;
     position:fixed;
     overflow:hidden;
     height:100vh;
