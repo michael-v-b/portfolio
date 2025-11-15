@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Banner from "./Banner/Banner";
 import Background from "./Background/Background";
 import DownArrow from "./assets/down-arrow.svg?react";
+import About from "./About/About";
 import { motion } from "framer-motion";
 import "./App.css";
 
@@ -25,7 +26,9 @@ function App() {
         >
           <DownArrow className="down-arrow" />
         </motion.div>
-        <div className="about-container">This is full of text</div>
+
+        <About />
+
         <Banner />
       </div>
     </>

@@ -7,7 +7,7 @@ const Banner = () => {
   const textRef = useRef(null);
   let animationFrame;
   let shiftSpeed = 0.1;
-  const bannerHeight = "15vh";
+  const bannerHeight = "10vh";
   //infinitely shift the color hue
   useEffect(() => {
     let hue = -50;
