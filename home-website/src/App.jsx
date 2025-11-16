@@ -3,6 +3,8 @@ import Banner from "./Banner/Banner";
 import Background from "./Background/Background";
 import DownArrow from "./assets/down-arrow.svg?react";
 import About from "./About/About";
+import Projects from "./Projects/Projects";
+import Experience from "./Experience/Experience";
 import { motion } from "framer-motion";
 import "./App.css";
 
@@ -28,6 +30,8 @@ function App() {
         </motion.div>
 
         <About />
+        <Experience />
+        <Projects />
 
         <Banner />
       </div>

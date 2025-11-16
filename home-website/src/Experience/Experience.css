@@ -1,0 +1,39 @@
+:root{
+    --experience-color: #70a2f9;
+    --job-color:#3b3b3b;
+    --job-range:#70a2f9;
+}
+
+.experience-background{
+    width:100vw;
+    padding-bottom:10vh;
+    color:rgb(28, 28, 28);
+    background-color:rgb(246, 246, 246);
+}
+
+.experience-container{
+    margin-left:10vh;
+}
+
+.experience-title{
+    color:var(--experience-color);
+    font-size:8vh;
+    font-weight:300;
+    text-align:center;
+}
+
+.job-title{
+    color:var(--job-color);
+    font-weight:500;
+}
+
+.job-time-range{
+    color:var(--job-range);
+    font-weight:500;
+}
+
+.job-responsibility{
+    font-size:3vh;
+}
+
+
