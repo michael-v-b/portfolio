@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+import ColorChanger from "./ColorChanger.jsx";
 import Banner from "./Banner/Banner";
 import Background from "./Background/Background";
 import DownArrow from "./assets/down-arrow.svg?react";
@@ -9,8 +10,11 @@ import { motion } from "framer-motion";
 import "./App.css";
 
 function App() {
+  const hue = useRef(-50);
+
   return (
     <>
+      <ColorChanger hue={hue} />
       <Background />
       <div className="web-container">
         <motion.div
@@ -28,12 +32,14 @@ function App() {
         >
           <DownArrow className="down-arrow" />
         </motion.div>
-
         <About />
-        <Experience />
-        <Projects />
+        <Projects hue={hue} />
 
-        <Banner />
+        <Experience />
+
+        <div>Contact Info</div>
+
+        <Banner hue={hue} />
       </div>
     </>
   );

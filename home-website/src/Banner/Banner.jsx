@@ -2,26 +2,23 @@ import "./Banner.css";
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 
-const Banner = () => {
+const Banner = ({ hue }) => {
   const bannerRef = useRef(null);
   const textRef = useRef(null);
-  let animationFrame;
-  let shiftSpeed = 0.1;
   const bannerHeight = "10vh";
+  let animationFrame;
   //infinitely shift the color hue
   useEffect(() => {
-    let hue = -50;
     const bannerStyle = bannerRef.current.style;
     const textStyle = textRef.current.style;
-    const colorShift = () => {
-      hue = (hue + shiftSpeed) % 360;
-      const color = "hsla(" + hue + ", 100%, 70%, 1.00)";
-      bannerStyle.borderColor = color;
-      textStyle.color = color;
-      animationFrame = requestAnimationFrame(colorShift);
-    };
-    animationFrame = requestAnimationFrame(colorShift);
 
+    const changeColors = () => {
+      bannerStyle.borderColor = hue.current;
+      textStyle.color = hue.current;
+      animationFrame = window.requestAnimationFrame(changeColors);
+    };
+
+    animationFrame = window.requestAnimationFrame(changeColors);
     return () => cancelAnimationFrame(animationFrame);
   }, []);
 
