@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import ColorChanger from "./ColorChanger";
 import Banner from "./Banner/Banner";
 import Background from "./Background/Background";
@@ -14,7 +14,10 @@ function App() {
   const hue = useRef(-50);
   const nameRef = useRef(null);
   const headerRef = useRef(null);
+  const arrowRef = useRef(null);
+  const [arrowIsColorful, setArrowIsColorful] = useState(false);
   let animationFrame;
+  let arrowFrame = useRef(null);
 
   useEffect(() => {
     const changeColor = () => {
@@ -24,6 +27,21 @@ function App() {
     animationFrame = window.requestAnimationFrame(changeColor);
     return () => window.cancelAnimationFrame(animationFrame);
   }, []);
+
+  useEffect(() => {
+    const arrowStyle = arrowRef.current.style;
+    const changeColor = () => {
+      arrowStyle.color = hue.current;
+      arrowFrame.current = window.requestAnimationFrame(changeColor);
+    };
+    if (arrowIsColorful) {
+      arrowFrame.current = window.requestAnimationFrame(changeColor);
+    } else {
+      window.cancelAnimationFrame(arrowFrame.current);
+      arrowStyle.color = "#FFF";
+    }
+    return () => window.cancelAnimationFrame(arrowFrame.current);
+  }, [arrowIsColorful]);
 
   return (
     <>
@@ -61,6 +79,19 @@ function App() {
         </motion.div>
         <TypeHeader />
         <motion.div
+          ref={arrowRef}
+          className="arrow-container"
+          onMouseEnter={() => {
+            setArrowIsColorful(true);
+          }}
+          onMouseLeave={() => {
+            setArrowIsColorful(false);
+          }}
+          onClick={() => {
+            window.scrollTo({ top: 650, behavior: "smooth" });
+          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, y: [0, 10, 0] }}
           transition={{

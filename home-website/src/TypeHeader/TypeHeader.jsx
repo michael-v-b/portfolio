@@ -6,9 +6,10 @@ const Typer = () => {
   const mainText = useRef("");
   const textContainer = useRef(null);
   const firstText = "I'm a ";
-  const spellings = ["programmar", "programmmar", "programmmer"];
+  const spellings = ["programmar", "programmmer"];
   const finalText = "I write code...";
 
+  //create a function that waits x amount of seconds, makeTimeOut is too laggy
   const wait = (seconds) => {
     return new Promise((resolve) => {
       let start;
@@ -42,6 +43,7 @@ const Typer = () => {
   };
 
   const typeWords = async () => {
+    await wait(1.5);
     await addWord(firstText);
     await wait(0.01);
     for (let i = 0; i < spellings.length; i++) {

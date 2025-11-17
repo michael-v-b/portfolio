@@ -16,8 +16,19 @@
     font-size:15vh;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.down-arrow{
+.arrow-container{
+    
     margin-top:15vh;
-    height:10vh;
     margin-bottom:10vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:auto;
+    border-radius:100%;
+    border-style:solid;
+    border-width:0vh;
+}
+.down-arrow{
+    height:10vh;
+    width:10vh;
 }
