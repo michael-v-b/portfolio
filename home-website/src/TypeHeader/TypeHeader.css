@@ -1,0 +1,18 @@
+.type-container{
+    display:flex;
+    flex-direction:row;
+    font-family:'Courier New', Courier, monospace;
+    font-size:6vh;
+    font-weight:100;
+}
+.cursor{
+    animation: blinker .75s step-end infinite;
+}
+@keyframes blinker {
+    0%,50%{
+        opacity:1;
+    }
+    50.01%,100%{
+        opacity:0;
+    }
+}

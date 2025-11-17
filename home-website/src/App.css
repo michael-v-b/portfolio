@@ -7,8 +7,17 @@
     flex-direction:column;
     height:300vh;
 }
+.intro-header{
+    margin-top:30vh;
+    font-size:5vh;
+    font-weight:100;
+}
+.name-header{
+    font-size:15vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .down-arrow{
-    margin-top:80vh;
+    margin-top:15vh;
     height:10vh;
     margin-bottom:10vh;
 }
