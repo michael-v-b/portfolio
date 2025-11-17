@@ -6,10 +6,12 @@ import svgr from 'vite-plugin-svgr'
 export default defineConfig({
   plugins: [
     svgr(),
+    
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler']],
       },
     }),
   ],
+  base:'/portfolio/',
 })
