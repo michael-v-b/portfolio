@@ -1,4 +1,5 @@
 .about-container{
+    padding-top:10vh;
     display:flex;
     justify-content:flex-start;
     align-items:center;
