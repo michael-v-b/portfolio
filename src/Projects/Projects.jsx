@@ -1,6 +1,8 @@
 import Project from "./Project";
 import weavel from "../assets/weavel.png";
 import ml from "../assets/ml.png";
+import solitaire from "../assets/solitaire.png";
+import sorter from "../assets/sorter.png";
 import "./Projects.css";
 
 const Projects = ({ hue }) => {
@@ -24,6 +26,21 @@ const Projects = ({ hue }) => {
           title="Machine Learning Visualizer"
           description="An educational website that explains various important concepts in Machine Learning and AI, such as gradient descent and linear regresssion. 
           It was programmed using TypeScript React, with animated svgs created using Rive."
+          position="right"
+        />
+        <Project
+          hue={hue}
+          picture={sorter}
+          title="Sorting Algorithm Visualizer"
+          description="An educational tool to visualize common sorting algorithms coded in C# using the Unity Game Engine. It features strong UI/UX elements and 
+          showcases a variety of different algorithms including Selection, Bubble Sort, Merge Sort and Radix Sort."
+        />
+        <Project
+          hue={hue}
+          picture={solitaire}
+          title="Solitaire"
+          description="A recreation of the popular game Solitaire coded in C# using the Unity Game Engine. 
+          It heavily features elements of UI/UX, data structures such as stacks and queues, with an object oriented approach."
           position="right"
         />
       </div>
