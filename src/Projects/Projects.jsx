@@ -19,6 +19,7 @@ const Projects = ({ ref, hue }) => {
           Weavel Crochet also utilizes Supabase as a backend and Vercel as a hosting platform.
           Give it a try and make your own patterns!"
           position="left"
+          link="https://weavelcrochet.com"
         />
         <Project
           hue={hue}
@@ -27,6 +28,7 @@ const Projects = ({ ref, hue }) => {
           description="An educational website that explains various important concepts in Machine Learning and AI, such as gradient descent and linear regresssion. 
           It was programmed using TypeScript React, with animated svgs created using Rive."
           position="right"
+          link="https://michael-v-b.github.io/ML-Visualizer"
         />
         <Project
           hue={hue}
@@ -34,6 +36,7 @@ const Projects = ({ ref, hue }) => {
           title="Sorting Algorithm Visualizer"
           description="An educational tool to visualize common sorting algorithms coded in C# using the Unity Game Engine. It features strong UI/UX elements and 
           showcases a variety of different algorithms including Selection, Bubble Sort, Merge Sort and Radix Sort."
+          link="https://churgferguson.itch.io/sorting-algorithms"
         />
         <Project
           hue={hue}
@@ -42,6 +45,7 @@ const Projects = ({ ref, hue }) => {
           description="A recreation of the popular game Solitaire coded in C# using the Unity Game Engine. 
           It heavily features elements of UI/UX, data structures such as stacks and queues, with an object oriented approach."
           position="right"
+          link="https://churgferguson.itch.io/solitaire"
         />
       </div>
     </>

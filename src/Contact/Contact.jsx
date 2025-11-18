@@ -31,16 +31,19 @@ const Contact = ({ ref, hue }) => {
             image={<Mail className="contact-image " />}
             media="mail"
             name="Email"
+            link="mailto:michael.v.burton@gmail.com"
           />
           <ContactCard
             image={<Linkedin className="contact-image" />}
             media="linkedin"
             name="LinkedIn"
+            link="https://linkedin.com/in/michael-v-burton"
           />
           <ContactCard
             image={<Github className="contact-image" />}
             media="github"
             name="Github"
+            link="https://github.com/michael-v-b"
           />
         </div>
       </div>

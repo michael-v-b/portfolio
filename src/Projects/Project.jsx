@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
-const Project = ({ hue, picture, title, description, position }) => {
+const Project = ({ hue, picture, title, description, position, link }) => {
   const [projectPosition, setPosition] = useState("project-left");
   const durationMax = 7;
   const durationMin = 3;
@@ -31,7 +31,7 @@ const Project = ({ hue, picture, title, description, position }) => {
 
   return (
     <>
-      <div className={"project " + projectPosition}>
+      <a href={link} target="_blank" className={"project " + projectPosition}>
         <motion.div
           ref={projectRef}
           whileHover={{ scale: 1.05 }}
@@ -52,7 +52,7 @@ const Project = ({ hue, picture, title, description, position }) => {
             <div className="project-description">{description}</div>
           </div>
         </motion.div>
-      </div>
+      </a>
     </>
   );
 };

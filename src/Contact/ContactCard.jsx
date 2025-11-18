@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const ContactCard = ({ image, media, name }) => {
+const ContactCard = ({ image, media, name, link }) => {
   const mediaMap = {
     linkedin: "#0077bf",
     mail: "#90bbefff",
@@ -8,7 +8,9 @@ const ContactCard = ({ image, media, name }) => {
   };
   return (
     <>
-      <motion.div
+      <motion.a
+        href={link}
+        target="_blank"
         whileHover={{
           scale: 1.1,
           color: mediaMap[media],
@@ -18,7 +20,7 @@ const ContactCard = ({ image, media, name }) => {
       >
         {image}
         <div>{name}</div>
-      </motion.div>
+      </motion.a>
     </>
   );
 };
