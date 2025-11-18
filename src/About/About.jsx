@@ -1,12 +1,12 @@
 import "./About.css";
-
+import Me from "../assets/me.png";
 const About = ({ ref }) => {
   return (
     <>
       <div ref={ref} className="about-container">
         <h1 className="about-header">About Me</h1>
         <div className="about-text-container">
-          <div className="about-photo" />
+          <img src={Me} className="about-photo" />
           <div className="about-text">
             Hello! I’m Michael, and I'm an aspiring fullstack developer with a
             passion for web technologies. I’ve built several personal projects
