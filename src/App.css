@@ -5,7 +5,7 @@
     display:flex;
     align-items:center;
     flex-direction:column;
-    height:300vh;
+    height:auto;
 }
 .intro-header{
     margin-top:30vh;

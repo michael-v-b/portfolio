@@ -1,8 +1,8 @@
 import Project from "./Project";
-import weavel from "../assets/weavel.png";
-import ml from "../assets/ml.png";
-import solitaire from "../assets/solitaire.png";
-import sorter from "../assets/sorter.png";
+import weavel from "../assets/projects/weavel.png";
+import ml from "../assets/projects/ml.png";
+import solitaire from "../assets/projects/solitaire.png";
+import sorter from "../assets/projects/sorter.png";
 import "./Projects.css";
 
 const Projects = ({ hue }) => {

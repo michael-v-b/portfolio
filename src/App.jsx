@@ -7,6 +7,7 @@ import About from "./About/About";
 import Projects from "./Projects/Projects";
 import Experience from "./Experience/Experience";
 import TypeHeader from "./TypeHeader/TypeHeader";
+import Contact from "./Contact/Contact";
 import { motion } from "framer-motion";
 import "./App.css";
 
@@ -111,7 +112,7 @@ function App() {
 
         <Experience />
 
-        <div>Contact Info</div>
+        <Contact hue={hue} />
 
         <Banner hue={hue} />
       </div>
