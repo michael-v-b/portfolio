@@ -5,7 +5,7 @@ import ContactCard from "./ContactCard.jsx";
 import "./Contact.css";
 import { useRef, useEffect } from "react";
 
-const Contact = ({ hue }) => {
+const Contact = ({ ref, hue }) => {
   const contactRef = useRef(null);
   let animationFrame;
 
@@ -19,7 +19,7 @@ const Contact = ({ hue }) => {
   }, []);
   return (
     <>
-      <div className="contacts-window">
+      <div ref={ref} className="contacts-window">
         <div ref={contactRef} className="contact-title">
           Contacts
         </div>

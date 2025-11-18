@@ -16,6 +16,10 @@ function App() {
   const nameRef = useRef(null);
   const headerRef = useRef(null);
   const arrowRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const contactRef = useRef(null);
   const [arrowIsColorful, setArrowIsColorful] = useState(false);
   let animationFrame;
   let arrowFrame = useRef(null);
@@ -107,14 +111,20 @@ function App() {
         >
           <DownArrow className="down-arrow" />
         </motion.div>
-        <About />
-        <Projects hue={hue} />
+        <About ref={aboutRef} />
+        <Projects ref={projectsRef} hue={hue} />
 
-        <Experience />
+        <Experience ref={experienceRef} />
 
-        <Contact hue={hue} />
+        <Contact ref={contactRef} hue={hue} />
 
-        <Banner hue={hue} />
+        <Banner
+          aboutRef={aboutRef}
+          projectsRef={projectsRef}
+          experienceRef={experienceRef}
+          contactRef={contactRef}
+          hue={hue}
+        />
       </div>
     </>
   );

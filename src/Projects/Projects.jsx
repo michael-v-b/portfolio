@@ -5,10 +5,10 @@ import solitaire from "../assets/projects/solitaire.png";
 import sorter from "../assets/projects/sorter.png";
 import "./Projects.css";
 
-const Projects = ({ hue }) => {
+const Projects = ({ ref, hue }) => {
   return (
     <>
-      <div className="projects-container">
+      <div ref={ref} className="projects-container">
         <div className="projects-title">Projects</div>
         <Project
           hue={hue}

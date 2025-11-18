@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const ContactCard = ({ image, media, name }) => {
   const mediaMap = {
     linkedin: "#0077bf",
-    mail: "#73a7e7",
+    mail: "#90bbefff",
     github: "#a732a7",
   };
   return (

@@ -1,9 +1,9 @@
 import "./About.css";
 
-const About = () => {
+const About = ({ ref }) => {
   return (
     <>
-      <div className="about-container">
+      <div ref={ref} className="about-container">
         <h1 className="about-header">About Me</h1>
         <div className="about-text-container">
           <div className="about-photo" />

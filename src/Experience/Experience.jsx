@@ -1,10 +1,10 @@
 import "./Experience.css";
 import Job from "./Job";
 
-const Experience = () => {
+const Experience = ({ ref }) => {
   return (
     <>
-      <div className="experience-background">
+      <div ref={ref} className="experience-background">
         <div className="experience-container">
           <h1 className="experience-title"> Experience</h1>
           <hr />
