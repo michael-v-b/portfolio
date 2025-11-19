@@ -14,6 +14,7 @@
 
 .experience-container{
     margin-left:10vh;
+    margin-right:10vh;
 }
 
 .experience-title{
@@ -35,6 +36,20 @@
 
 .job-responsibility{
     font-size:3vh;
+}
+
+@media (max-width:480px) {
+    .job-title{
+        text-align:center;
+        font-size:3vh;
+    }
+    .job-time-range{
+        font-size:2.5vh;
+        text-align:center;
+    }
+    .job-responsibility{
+        font-size:2vh;
+    }
 }
 
 

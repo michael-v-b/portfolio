@@ -32,3 +32,15 @@
     height:10vh;
     width:10vh;
 }
+
+@media (max-width:480px){
+    .intro-header{
+        margin-top:40vh;
+    }
+    .name-header{
+        font-size:8vh;
+    }
+    .arrow-container{
+        margin-top:25vh;
+    }
+}
