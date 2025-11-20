@@ -9,7 +9,7 @@ const Projects = ({ ref, hue }) => {
   return (
     <>
       <div ref={ref} className="projects-container">
-        <div className="projects-title">Projects</div>
+        <div className="projects-title">My Projects</div>
         <Project
           hue={hue}
           picture={weavel}
